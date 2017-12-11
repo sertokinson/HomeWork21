@@ -1,16 +1,23 @@
 package com.sbt.javaschool.jdbc.homework1.entities;
 
-import java.util.Date;
+import java.sql.Date;
+import java.sql.Time;
 
-public class Lessons {
+public class Lesson {
     private Integer id;
     private String lection_name;
     private Date date;
+    private Time time;
 
-    public Lessons(Integer id, String lection_name, Date date) {
+    public Time getTime() {
+        return time;
+    }
+
+    public Lesson(Integer id, String lection_name, Date date,Time time) {
         this.id = id;
         this.lection_name = lection_name;
         this.date = date;
+        this.time=time;
     }
 
     public Integer getId() {
@@ -39,7 +46,7 @@ public class Lessons {
 
     @Override
     public String toString() {
-        return "Lessons{" +
+        return "Lesson{" +
                 "id=" + id +
                 ", lection_name='" + lection_name + '\'' +
                 ", date=" + date +

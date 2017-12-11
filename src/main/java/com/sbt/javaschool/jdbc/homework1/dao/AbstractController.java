@@ -45,7 +45,7 @@ public abstract class AbstractController<T> {
      *
      * @param id - соответствует колонке идентификаторов в БД.
      */
-    public abstract void deleteById(long id);
+    public abstract void deleteById(int id);
 
     /**
      * Удаляет всех.
